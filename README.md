@@ -1,73 +1,67 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
-# Evvap-latest
->>>>>>> 67ffb48c8fe10f2723374f0b47184b3ed2bfdfea
+/frontend
+├── public/                     # Static assets like index.html, favicon, robots.txt
+│   ├── index.html
+│   └── favicon.ico
+│
+├── src/
+│   ├── main.tsx                # React app entry point
+│   ├── vite-env.d.ts           # Vite environment typings (if using Vite)
+│
+│   ├── app/                    # App setup: routing, global providers, store, layout
+│   │   ├── App.tsx
+│   │   ├── router.tsx
+│   │   ├── store.ts           # Global state management (Redux, Zustand, etc.)
+│   │   └── providers.tsx      # Context providers, Theme, Auth, etc.
+│
+│   ├── features/               # Domain feature modules (self-contained)
+│   │   ├── auth/               # Auth UI, hooks, API, state, types
+│   │   │   ├── components/
+│   │   │   ├── hooks/
+│   │   │   ├── services/       # API calls or logic
+│   │   │   └── types/
+│   │   │
+│   │   ├── dashboard/
+│   │   │   ├── components/
+│   │   │   ├── hooks/
+│   │   │   ├── services/
+│   │   │   └── types/
+│   │   │
+│   │   └── users/
+│   │       ├── components/
+│   │       ├── hooks/
+│   │       ├── services/
+│   │       └── types/
+│
+│   ├── pages/                 # Page-level components (mapped to routes)
+│   │   ├── HomePage/
+│   │   │   ├── HomePage.tsx
+│   │   │   └── index.ts
+│   │   ├── DashboardPage/
+│   │   │   ├── DashboardPage.tsx
+│   │   │   └── index.ts
+│   │   └── ProfilePage/
+│   │       ├── ProfilePage.tsx
+│   │       └── index.ts
+│
+│   ├── shared/                # Shared components/utilities used across features/pages
+│   │   ├── components/        # UI components (buttons, inputs, modals, layout)
+│   │   ├── hooks/             # Shared hooks (e.g. useDebounce, useApi)
+│   │   ├── constants/         # App-wide constants (API endpoints, configs)
+│   │   ├── utils/             # Utility functions/helpers
+│   │   ├── services/          # Shared service clients (e.g. API client)
+│   │   └── types/             # Shared types/interfaces
+│
+│   ├── styles/                # Global styles & Tailwind overrides
+│   │   ├── globals.css
+│   │   └── components.css
+│
+│   └── assets/                # Images, fonts, icons, svgs
+│
+├── tests/                     # End-to-end or integration tests (optional)
+│
+├── .env                      # Environment variables
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+├── postcss.config.js
+└── vite.config.ts             # or webpack.config.js (depending on bundler)
