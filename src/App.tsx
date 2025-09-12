@@ -1,15 +1,14 @@
-import './App.css'
+// src/App.tsx
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './appRoutes';
+import './index.css';
 
 function App() {
-
   return (
-    <>
-        <div >
-          This is our Project 
-          <h2 className="hello">hiiiii</h2>
-        </div>
-    </>
-  )
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
