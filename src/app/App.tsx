@@ -1,13 +1,15 @@
-import React from "react";
+import './App.css'
 
 function App() {
+
   return (
     <>
-      <div className="text-3xl font-bold underline text-red-500 ">
-        hello fo mou
-      </div>
+        <div >
+          This is our Project 
+          <h2 className="hello">hiiiii</h2>
+        </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
