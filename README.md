@@ -1,3 +1,4 @@
+```
 /frontend
 ├── public/                     # Static assets like index.html, favicon, robots.txt
 │   ├── index.html
@@ -65,3 +66,4 @@
 ├── tailwind.config.js
 ├── postcss.config.js
 └── vite.config.ts             # or webpack.config.js (depending on bundler)
+```
