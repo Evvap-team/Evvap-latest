@@ -12,7 +12,6 @@ function App() {
 }
 
 export default App;
- 
 ////   git add filename  <- to add a particular file
 ////   git add .          <- to add all modidied files
 ////    git commit -m"commit messege"   <- to commit
